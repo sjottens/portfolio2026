@@ -1,0 +1,173 @@
+.main-body {
+    .intro-tekst {
+        width: 100%;
+    }
+
+    .body-projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 700px;
+        .container {
+            position: relative;
+            display: flex;
+            padding: 80px 40px;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 80px;
+            .card {
+                position: relative;
+                width: 350px;
+                height: 180px;
+                background: #FFF;
+                transition: 0.5s;
+                &:hover {
+                    height: 450px;
+                    .lines:before {
+                        animation-play-state: running;
+                    }
+                    .imgBx {
+                        top: 25px;
+                        width: 215px;
+                        height: 215px;
+                        &::before {
+                            animation-play-state: running;
+                        }
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                    .content {
+                        .details {
+                            transform: translateY(0px);
+                            p, a {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .lines {
+                    position: absolute;
+                    inset: 0;
+                    background: #000;
+                    overflow: hidden;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 600px;
+                        height: 120px;
+                        background: linear-gradient(transparent, #55adff, #55adff, #55adff, transparent);
+                        animation: animate 4s linear infinite;
+                        animation-play-state: paused;
+                    }
+                    @keyframes animate {
+                        0% {
+                            transform: translate(-50%, -50%) rotate(0deg);
+                        }
+                        100% {
+                            transform: translate(-50%, -50%) rotate(360deg);
+                        }
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        inset: 3px;
+                        background: #292929;
+                    }
+                }
+                .imgBx {
+                    position: absolute;
+                    top: -60px;
+                    left: 50%;
+                    width: 150px;
+                    height: 150px;
+                    transform: translateX(-50%);
+                    background: #000;
+                    transition: 0.5s;
+                    z-index: 10;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 500px;
+                        height: 150px;
+                        transform: translate(-50%, -50%);
+                        background: linear-gradient(transparent, #626162, #626162, #626162, transparent);
+                        animation: animate2 6s linear infinite;
+                        animation-play-state: paused;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        inset: 3px;
+                        background: #292929;
+                    }
+                    @keyframes animate2 {
+                        0% {
+                            transform: translate(-50%, -50%) rotate(360deg);
+                        }
+                        100% {
+                            transform: translate(-50%, -50%) rotate(0deg);
+                        }
+                    }
+                    img {
+                        position: absolute;
+                        z-index: 1;
+                        opacity: 0.5;
+                        transition: 0.5s;
+                        max-width: 160px;
+                    }
+                }
+                .content {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    overflow: hidden;
+                    .details {
+                        padding: 30px 20px;
+                        text-align: center;
+                        width: 100%;
+                        transition: 0.5s;
+                        transform: translateY(145px);
+                        h2 {
+                            font-size: 1.5em;
+                            font-weight: 500;
+                            color: #fff;
+                            line-height: 1.2em
+                        }
+                        p {
+                            color: #FFF;
+                            opacity: 0;
+                            transition: 0.5s;
+                            min-height: 70px;
+                        }
+                        a {
+                            display: inline-block;
+                            padding: 8px 15px;
+                            background: #fff;
+                            color: #292929;
+                            margin-top: 10px;
+                            font-weight: 500;
+                            text-decoration: none;
+                            opacity: 0;
+                            transition: 0.5s;
+                            &:hover {
+                                background: #55adff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
