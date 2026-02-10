@@ -43,8 +43,7 @@ export default function ProjectsPage() {
                 <div className="details">
                   <h2>Alko.fi</h2>
                   <p>
-                    Developed and maintained user-facing features for the Alko website.<br/>
-                    Collaborated closely with UI/UX designers to ensure seamless user experiences.
+                    Developed and maintained user-facing features for the Alko website.
                   </p>
                   <Link href="/pages/alko" className="cursor-hover">Read More</Link>
                 </div>
@@ -92,7 +91,7 @@ export default function ProjectsPage() {
                 <div className="details">
                   <h2>PLUS.nl</h2>
                   <p>
-                    Built cross-browser website/shop using HTML, Less, JavaScript, Jquery and intershops isml, integrating with Intershop's backend services.
+                    Built cross-browser website/shop using HTML, Less, JavaScript, Jquery and intershops isml.
                   </p>
                   <Link href="/pages/plus" className="cursor-hover">Read More</Link>
                 </div>
